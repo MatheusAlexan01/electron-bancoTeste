@@ -1,0 +1,211 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom, #9ce2f3, #d7d8d6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu-lateral {
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #333; 
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #0004ff;
+    overflow: hidden;
+    transition: .2s;
+}
+
+nav.menu-lateral.expandir {
+    width: 250px;
+}
+
+.btn-expandir { 
+    width: 100%;
+    padding-left: 9px;
+}
+
+.btn-expandir > i {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+    margin-left: -5px;
+}
+
+ul li.item-menu:hover {
+    background-color: #02c6f9;
+}
+
+ul li.item-menu {
+    transition: .2s;
+}
+
+ul li.ativo {
+    background-color: #02c6f9;
+}
+
+ul li.item-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 20px;
+}
+
+ul li.item-menu a .icon > i {
+    font-size: 30px;
+}
+
+#logo {
+    width: 500px;
+}
+
+section {
+    color: #000000;
+    margin-top: 20px;
+    text-align: center;
+    flex-direction: row;
+    display: flex;
+    background-color: #fff;
+    width: 990px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+#esquerda {
+    width: 50%;
+    display: flex;
+}
+
+#volta {
+    width: 30px;
+    margin-left: 10px;
+}
+
+#regi {
+    margin-left: 40px;
+}
+
+#direita {
+    width: 50%;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: flex-end;
+}
+
+#regiD {
+    margin-right: 20px;
+}
+
+main {
+    padding: 20px;
+    width: 80%;
+    
+}
+
+main div {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 2px solid #000000;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+    font-size: 12px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #555;
+}
+
+#tabelaRegistros {
+    margin-top: 20px;
+}
+
+#tabelaRegistros thead {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+#tabelaRegistros th, #tabelaRegistros td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#tabelaRegistros tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tabelaRegistros tr:hover {
+    background-color: #f1f1f1;
+}
+
+#lucro{
+    display: flex;
+    width: 250px;
+    margin-left: 57%;
+    justify-content: flex-start;
+    font-size: 14px;
+}
+
+.botoesB{
+    padding-top: 50px;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+
+}

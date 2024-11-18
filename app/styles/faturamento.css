@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom, #9ce2f3, #d7d8d6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 130vh;
+}
+
+.menu-lateral {
+    width: 65px;
+    height: 130vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    padding: 40px 0 10px 1%;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-lateral.expandir {
+    width: 250px;
+}
+
+.btn-expandir {
+    width: 100%;
+    padding-left: 15px;
+}
+
+.btn-expandir > i {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+    margin-left: 0;
+    padding: 0;
+}
+
+ul li.item-menu:hover {
+    background-color: #02c6f9;
+}
+
+ul li.item-menu {
+    transition: background-color 0.3s ease;
+}
+
+ul li.ativo {
+    background-color: #02c6f9;
+}
+
+ul li.item-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+ul li.item-menu a .icon > i {
+    font-size: 24px;
+}
+
+header.cabecario figure img {
+    width: 350px;
+    margin-top: 20px;
+    object-fit: cover;
+}
+
+main {
+    padding: 20px;
+    width: 90%;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+    grid-column: span 3;
+}
+
+form input[type="number"],
+form input[type="text"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: none;
+    height: 80px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    grid-column: span 3;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+h2 {
+    font-size: 26px;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#detalhesFaturamento {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 80%;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#detalhesFaturamento h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#detalhesFaturamento p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}

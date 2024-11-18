@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Vagas</title>
+    <link rel="stylesheet" href="styles/inicial.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/digital-numbers" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script defer src="js/inicial.js"></script>
+</head>
+<body>
+    <nav class="menu-lateral">
+        <div class="btn-expandir">
+            <i class="bi bi-list-task" id="expan"></i>
+        </div>
+
+        <ul>
+            <li class="item-menu ativo">
+                <a href="#">
+                    <span class="icon"> <i class="bi bi-house-door-fill"></i></span>
+                    <span class="txt-link">Inicio</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="pagamento.html">
+                    <span class="icon"><i class="bi bi-coin"></i></span>
+                    <span class="txt-link">Pagamento</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="RegistroG.html">
+                    <span class="icon"><i class="bi bi-card-checklist"></i></span>
+                    <span class="txt-link">Registros</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="clientes.html">
+                    <span class="icon"><i class="bi bi-person-circle"></i></span>
+                    <span class="txt-link">Clientes</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="faturamento.html">
+                    <span class="icon"><i class="bi bi-cash-coin"></i></span>
+                    <span class="txt-link">Faturamento</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="cabeçario">
+        <div id="esquerda">
+            <figure>
+                <img id="logo" src="../styles/stacina+-removebg-preview.png" alt="">
+            </figure>
+        </div>
+            
+        </main>
+    </header>
+    <main id="principal">
+        <form id="veiculoForm" action="">
+            <div class="form-header">
+                <h3>Adicionar Veículo:</h3>
+                <div class="cliente-option">
+                    <input type="radio" id="clienteExistente" name="clienteOption">
+                    <label for="clienteExistente">Já sou cliente</label>
+                </div>
+            </div>
+            
+            <label for="nome">Proprietário do Veículo:</label>
+            <input type="text" id="nome">
+            
+            <label for="placa">Placa do Veículo:</label>
+            <input type="text" id="placa">
+            
+            <label for="tipo">Tipo:</label>
+            <select id="tipo">
+                <option value="" disabled selected hidden>Escolha um Veículo</option>
+                <option value="MOTO">MOTO</option>
+                <option value="CARRO">CARRO</option>
+                <option value="CAMINHÃO">CAMINHÃO</option>
+            </select>
+            
+            <label for="cor">Cor:</label>
+            <select id="cor">
+                <option value="" disabled selected hidden>Escolha uma Cor</option>
+                <option value="PRETO">PRETO</option>
+                <option value="CINZA">CINZA</option>
+                <option value="BRANCO">BRANCO</option>
+                <option value="VERMELHO">VERMELHO</option>
+                <option value="AZUL ESCURO">AZUL ESCURO</option>
+                <option value="PRATA">PRATA</option>
+            </select>
+            
+            <label for="data">Horário de Entrada:</label>
+            <input type="time" id="data">
+            
+            <button type="button" onclick="cadastrar()">Cadastrar</button>
+        </form>
+    
+        
+        <div id="clienteSelectContainer" style="display:none;">
+            <div id="reto">
+                <label for="clienteSelect">Selecione o Cliente:</label> 
+            </div>
+            <select id="clienteSelect">
+                
+            </select>
+            
+        </div>
+        
+    
+        <section class="seccao">
+            <p>Painel Geral</p>
+            <div id="scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Proprietário</th>
+                            <th>Placa</th>
+                            <th>Tipo</th>
+                            <th>Cor</th>
+                            <th>Horário de entrada</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultado">
+                        <!-- Os dados serão inseridos aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <section id="displayM">
+        <div id="displayH">
+            <h2> CONTROLE DE VAGAS</h2>
+        </div>
+
+        <section id="displayI">
+            <div class="card">
+                <P>Total de Vagas:</P>
+                <p class="numeral">20</p>
+        </div>
+
+        <div class="card">
+            <P>Total de Ocupadas:</P>
+            <p  class="numeral" id="vagasOcupadas">0</p>
+        </div>
+
+        <div class="card">
+            <P>Total de Disponiveis:</P>
+            <p class="numeral" id="vagasDisponiveis">20</p>
+        </div> 
+        </section>
+    </section>
+</body>
+</html>
